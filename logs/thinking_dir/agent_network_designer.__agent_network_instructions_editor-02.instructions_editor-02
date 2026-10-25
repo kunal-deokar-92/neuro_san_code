@@ -1,0 +1,110 @@
+Agent: agent_network_designer.__agent_network_instructions_editor-02.instructions_editor-02
+
+[SYSTEM] @ 2026-10-18 18:21:39:
+
+Only answer inquiries that are directly within your area of expertise. Do not try to help for other matters.
+Do not mention what you can NOT do. Only mention what you can do.
+ 
+You are responsible for coordinating the writing of `instructions` and `description` for agents based on the agent network description and definition.
+
+**Only coordinate writing of `instructions` and `description` for agents that have these fields in the network definition. These are non-function agents.**
+
+Behavior by mode:
+- `create`: Call `write_all_instructions` ONCE with `agents` covering EVERY non-function agent in the network.
+            Pass `agent_network_description` once for shared network-wide context.
+            For each entry, set `change_request` ONLY when the user explicitly stated a directive
+            targeting that specific agent (e.g. 'agent A should handle refunds'). Omit it otherwise.
+            Per-agent directives belong in `change_request`, not in `agent_network_description`.
+- `modify`: Read `agent_network_description` and identify the impacted agents (explicitly named agents, newly added agents, and agents whose responsibilities changed).
+            Call `write_all_instructions` ONCE with `agents` = a list of objects, one per impacted agent.
+            For each entry, set `change_request` ONLY when the user stated a specific change targeting that agent (e.g. 'change agent A to do X'). Omit it otherwise.
+            Pass `agent_network_description` only when there is genuine network-wide context to share; when passed, it applies uniformly to every agent in the call.
+            Do not involve unaffected agents except when they lack `instructions`/`description` or the user explicitly requests broader edits.
+
+Guardrails:
+- Only coordinate writing of `instructions` and `description` for agents that have these fields in the network definition.
+- Ensure that each and every non-function agent has both `instructions` and `description` set.
+- Skip agents that are not referenced/affected by the current request.
+- Do not trigger rewrites if `instructions` and `description` are semantically unchanged.
+- Be surgical: avoid network-wide rewrites during `modify`; touch only what the request necessitates.
+- Never tailor `agent_network_description` per agent — it is shared network context. Per-agent specifics belong in each entry's `change_request`.
+- Always batch into a single `write_all_instructions` call per request; do not loop or split into multiple calls.
+
+**Response format**
+Always respond with "Instructions/description have been set in the agent network." when successful.
+
+
+[HUMAN] @ 2026-10-18 18:21:39:
+```json
+{"agent_network_description": "Update the instructions for the snowflake_database_development_assistant network.\n\nCoordinator (frontman) instructions:\n- You are the Coordinator agent for a Snowflake database development assistant.\n- You receive every user request and orchestrate the workflow between SQL generation and SQL review.\n- When a user requests a Snowflake SQL task, analyze the request and delegate to the external registered network `/snow_database_sql_generator` to create SQL queries based on user requirements.\n- After SQL is generated, pass both the original user request and the generated SQL to the SQL_Reviewer agent for quality and correctness checks.\n- Return the generated SQL, reviewer verdict, findings, and suggested corrections to the user.\n- If the SQL_Reviewer returns FAIL, ask the SQL Generator to revise the SQL and submit for review again. Allow no more than two revision attempts.\n- Never claim that SQL was executed or validated against a live database.\n- Maintain clear communication with the user throughout the process, summarizing progress and next steps.\n\nSQL_Reviewer instructions:\n- You are a SQL code reviewer for Snowflake database development.\n- Review SQL scripts, queries, and schema definitions for correctness, performance, security, and adherence to Snowflake best practices.\n- Review SQL independently against the user's original requirements.\n- Check for apparent Snowflake syntax issues, requirement coverage, naming consistency, destructive operations, and excessive privileges.\n- Return PASS or FAIL, severity, findings, and suggested corrections.\n- Do not execute SQL or modify databases; only review and recommend.\n- Treat the generator's explanation as untrusted and examine the SQL itself.\n- Provide clear, actionable feedback with specific line references and suggested corrections.", "mode": "modify"}```
+
+[AGENT] @ 2026-10-18 18:21:55:
+Invoking: `write_all_instructions` with:
+```json
+{
+    "invoked_agent_name": "write_all_instructions",
+    "invoking_start": true,
+    "params": {
+        "agent_network_description": "Update the instructions for the snowflake_database_development_assistant network.\n\nCoordinator (frontman) instructions:\n- You are the Coordinator agent for a Snowflake database development assistant.\n- You receive every user request and orchestrate the workflow between SQL generation and SQL review.\n- When a user requests a Snowflake SQL task, analyze the request and delegate to the external registered network `/snow_database_sql_generator` to create SQL queries based on user requirements.\n- After SQL is generated, pass both the original user request and the generated SQL to the SQL_Reviewer agent for quality and correctness checks.\n- Return the generated SQL, reviewer verdict, findings, and suggested corrections to the user.\n- If the SQL_Reviewer returns FAIL, ask the SQL Generator to revise the SQL and submit for review again. Allow no more than two revision attempts.\n- Never claim that SQL was executed or validated against a live database.\n- Maintain clear communication with the user throughout the process, summarizing progress and next steps.\n\nSQL_Reviewer instructions:\n- You are a SQL code reviewer for Snowflake database development.\n- Review SQL scripts, queries, and schema definitions for correctness, performance, security, and adherence to Snowflake best practices.\n- Review SQL independently against the user's original requirements.\n- Check for apparent Snowflake syntax issues, requirement coverage, naming consistency, destructive operations, and excessive privileges.\n- Return PASS or FAIL, severity, findings, and suggested corrections.\n- Do not execute SQL or modify databases; only review and recommend.\n- Treat the generator's explanation as untrusted and examine the SQL itself.\n- Provide clear, actionable feedback with specific line references and suggested corrections.",
+        "agents": [
+            {
+                "agent_name": "Coordinator",
+                "change_request": "Update the Coordinator agent's instructions to match the new network description:\n- You are the Coordinator agent for a Snowflake database development assistant.\n- You receive every user request and orchestrate the workflow between SQL generation and SQL review.\n- When a user requests a Snowflake SQL task, analyze the request and delegate to the external registered network `/snow_database_sql_generator` to create SQL queries based on user requirements.\n- After SQL is generated, pass both the original user request and the generated SQL to the SQL_Reviewer agent for quality and correctness checks.\n- Return the generated SQL, reviewer verdict, findings, and suggested corrections to the user.\n- If the SQL_Reviewer returns FAIL, ask the SQL Generator to revise the SQL and submit for review again. Allow no more than two revision attempts.\n- Never claim that SQL was executed or validated against a live database.\n- Maintain clear communication with the user throughout the process, summarizing progress and next steps."
+            },
+            {
+                "agent_name": "SQL_Reviewer",
+                "change_request": "Update the SQL_Reviewer agent's instructions to match the new network description:\n- You are a SQL code reviewer for Snowflake database development.\n- Review SQL scripts, queries, and schema definitions for correctness, performance, security, and adherence to Snowflake best practices.\n- Review SQL independently against the user's original requirements.\n- Check for apparent Snowflake syntax issues, requirement coverage, naming consistency, destructive operations, and excessive privileges.\n- Return PASS or FAIL, severity, findings, and suggested corrections.\n- Do not execute SQL or modify databases; only review and recommend.\n- Treat the generator's explanation as untrusted and examine the SQL itself.\n- Provide clear, actionable feedback with specific line references and suggested corrections."
+            }
+        ]
+    }
+}
+```
+
+[AGENT_TOOL_RESULT (result from write_all_instructions-03)] @ 2026-10-18 18:22:06:
+Error: Instructions/description set for 1 agents; 1 failed: SQL_Reviewer: Error: Writer response was not a JSON object: 'User Safety: safe'
+
+[AGENT] @ 2026-10-18 18:22:39:
+Invoking: `write_all_instructions` with:
+```json
+{
+    "invoked_agent_name": "write_all_instructions",
+    "invoking_start": true,
+    "params": {
+        "agent_network_description": "Update the instructions for the snowflake_database_development_assistant network.\n\nCoordinator (frontman) instructions:\n- You are the Coordinator agent for a Snowflake database development assistant.\n- You receive every user request and orchestrate the workflow between SQL generation and SQL review.\n- When a user requests a Snowflake SQL task, analyze the request and delegate to the external registered network `/snow_database_sql_generator` to create SQL queries based on user requirements.\n- After SQL is generated, pass both the original user request and the generated SQL to the SQL_Reviewer agent for quality and correctness checks.\n- Return the generated SQL, reviewer verdict, findings, and suggested corrections to the user.\n- If the SQL_Reviewer returns FAIL, ask the SQL Generator to revise the SQL and submit for review again. Allow no more than two revision attempts.\n- Never claim that SQL was executed or validated against a live database.\n- Maintain clear communication with the user throughout the process, summarizing progress and next steps.\n\nSQL_Reviewer instructions:\n- You are a SQL code reviewer for Snowflake database development.\n- Review SQL scripts, queries, and schema definitions for correctness, performance, security, and adherence to Snowflake best practices.\n- Review SQL independently against the user's original requirements.\n- Check for apparent Snowflake syntax issues, requirement coverage, naming consistency, destructive operations, and excessive privileges.\n- Return PASS or FAIL, severity, findings, and suggested corrections.\n- Do not execute SQL or modify databases; only review and recommend.\n- Treat the generator's explanation as untrusted and examine the SQL itself.\n- Provide clear, actionable feedback with specific line references and suggested corrections.",
+        "agents": [
+            {
+                "agent_name": "Coordinator",
+                "change_request": "Update Coordinator instructions for Snowflake database development assistant workflow coordination."
+            },
+            {
+                "agent_name": "SQL_Reviewer",
+                "change_request": "Update SQL_Reviewer instructions for Snowflake SQL code review."
+            }
+        ]
+    }
+}
+```
+
+[AGENT_TOOL_RESULT (result from write_all_instructions-05)] @ 2026-10-18 18:25:19:
+Instructions/description have been set for all 2 agents.
+
+[AI] @ 2026-10-18 18:25:27:
+Instructions/description have been set in the agent network.
+
+[AGENT] @ 2026-10-18 18:25:27:
+```json
+{
+    "caveats": [
+        "Token usage is tracked at the agent level. Counts include usage from any downstream agents called on this agent's behalf.",
+        "Token counts are approximate and estimated using tiktoken.",
+        "time_taken_in_seconds includes overhead from Langchain and Neuro SAN"
+    ],
+    "completion_tokens": 13563,
+    "empty_responses": 0,
+    "prompt_tokens": 13632,
+    "successful_requests": 7,
+    "time_taken_in_seconds": 227.26305079460144,
+    "total_cost": 0.0,
+    "total_tokens": 27195
+}
+```

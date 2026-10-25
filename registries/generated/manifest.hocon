@@ -1,0 +1,8 @@
+{
+
+    "generated/sql_query_generator.hocon": true,
+
+    "generated/snow_database_sql_generator.hocon": true,
+
+    "generated/snowflake_database_development_assistant.hocon": true,
+}

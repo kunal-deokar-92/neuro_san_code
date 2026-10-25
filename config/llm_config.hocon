@@ -1,0 +1,8 @@
+
+{
+  "llm_config": {
+    "class": "openrouter",
+    "model_name": "openrouter/free",
+    "temperature": 0.1
+  }
+}

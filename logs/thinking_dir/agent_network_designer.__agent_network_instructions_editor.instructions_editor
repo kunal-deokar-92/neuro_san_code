@@ -1,0 +1,85 @@
+Agent: agent_network_designer.__agent_network_instructions_editor.instructions_editor
+
+[SYSTEM] @ 2026-10-18 18:20:42:
+
+Only answer inquiries that are directly within your area of expertise. Do not try to help for other matters.
+Do not mention what you can NOT do. Only mention what you can do.
+ 
+You are responsible for coordinating the writing of `instructions` and `description` for agents based on the agent network description and definition.
+
+**Only coordinate writing of `instructions` and `description` for agents that have these fields in the network definition. These are non-function agents.**
+
+Behavior by mode:
+- `create`: Call `write_all_instructions` ONCE with `agents` covering EVERY non-function agent in the network.
+            Pass `agent_network_description` once for shared network-wide context.
+            For each entry, set `change_request` ONLY when the user explicitly stated a directive
+            targeting that specific agent (e.g. 'agent A should handle refunds'). Omit it otherwise.
+            Per-agent directives belong in `change_request`, not in `agent_network_description`.
+- `modify`: Read `agent_network_description` and identify the impacted agents (explicitly named agents, newly added agents, and agents whose responsibilities changed).
+            Call `write_all_instructions` ONCE with `agents` = a list of objects, one per impacted agent.
+            For each entry, set `change_request` ONLY when the user stated a specific change targeting that agent (e.g. 'change agent A to do X'). Omit it otherwise.
+            Pass `agent_network_description` only when there is genuine network-wide context to share; when passed, it applies uniformly to every agent in the call.
+            Do not involve unaffected agents except when they lack `instructions`/`description` or the user explicitly requests broader edits.
+
+Guardrails:
+- Only coordinate writing of `instructions` and `description` for agents that have these fields in the network definition.
+- Ensure that each and every non-function agent has both `instructions` and `description` set.
+- Skip agents that are not referenced/affected by the current request.
+- Do not trigger rewrites if `instructions` and `description` are semantically unchanged.
+- Be surgical: avoid network-wide rewrites during `modify`; touch only what the request necessitates.
+- Never tailor `agent_network_description` per agent — it is shared network context. Per-agent specifics belong in each entry's `change_request`.
+- Always batch into a single `write_all_instructions` call per request; do not loop or split into multiple calls.
+
+**Response format**
+Always respond with "Instructions/description have been set in the agent network." when successful.
+
+
+[HUMAN] @ 2026-10-18 18:20:42:
+```json
+{"agent_network_description": "snowflake_database_development_assistant", "mode": "modify"}```
+
+[AGENT] @ 2026-10-18 18:20:49:
+Invoking: `write_all_instructions` with:
+```json
+{
+    "invoked_agent_name": "write_all_instructions",
+    "invoking_start": true,
+    "params": {
+        "agent_network_description": "snowflake_database_development_assistant",
+        "agents": [
+            {
+                "agent_name": "Coordinator",
+                "change_request": null
+            },
+            {
+                "agent_name": "SQL_Reviewer",
+                "change_request": null
+            }
+        ]
+    }
+}
+```
+
+[AGENT_TOOL_RESULT (result from write_all_instructions)] @ 2026-10-18 18:21:06:
+Instructions/description have been set for all 2 agents.
+
+[AI] @ 2026-10-18 18:21:07:
+Instructions/description have been set in the agent network.
+
+[AGENT] @ 2026-10-18 18:21:07:
+```json
+{
+    "caveats": [
+        "Token usage is tracked at the agent level. Counts include usage from any downstream agents called on this agent's behalf.",
+        "Token counts are approximate and estimated using tiktoken.",
+        "time_taken_in_seconds includes overhead from Langchain and Neuro SAN"
+    ],
+    "completion_tokens": 1776,
+    "empty_responses": 0,
+    "prompt_tokens": 4279,
+    "successful_requests": 4,
+    "time_taken_in_seconds": 25.883083820343018,
+    "total_cost": 0.0,
+    "total_tokens": 6055
+}
+```

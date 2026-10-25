@@ -1,0 +1,59 @@
+{
+# Importing content from other HOCON files
+# The include keyword must be unquoted and followed by a quoted URL or file path.
+# File paths should be absolute or relative to the script's working directory, not the HOCON file location.
+# This "aaosa.hocon" file contains key-value pairs used for substitution.
+# Specifically, it provides values for the following keys:
+#   - aaosa_call
+#   - aaosa_instructions
+# IMPORTANT:
+# Ensure that you run `python -m neuro_san_studio run` from the top level of the repository.
+# The path to this substitution file is **relative to the top-level directory**,
+# so running the script from elsewhere may result in file not found errors.
+    include "registries/aaosa.hocon"
+
+# Optional metadata describing this agent network
+    "metadata": {
+        "sample_queries": [
+            "Create a Snowflake table named 'customers' with columns for customer_id (integer, primary key), first_name (string), last_name (string), email (string), and created_at (timestamp with default current timestamp).",
+            "Generate a CREATE VIEW statement that shows all active customers along with their full names concatenated from first_name and last_name.",
+            "Write an ALTER TABLE statement to add a new column 'phone_number' of type VARCHAR(20) to the 'customers' table.",
+            "Create a Snowflake table called 'orders' with order_id as the primary key, customer_id as a foreign key referencing customers, order_date, and total_amount, then explain each part of the SQL statement."
+        ],
+        "date_created": "2026-10-17T11:49:47.604778+00:00",
+        "date_modified": "2026-10-17T11:49:47.604778+00:00"
+    },
+
+# Load the shared LLM configuration from a single source of truth.
+# This allows users to change the model in one file rather than
+# modifying the configuration for each agent network.
+# Note that the file path here is relative to the root level of the repo.
+    include "config/llm_config.hocon",
+
+    "max_execution_seconds": 600,
+
+   "instructions_prefix": """
+You are part of a team of assistants in snow_database_sql_generator.
+Only answer inquiries that are directly within your area of expertise.
+Do not try to help for other matters.
+Do not mention what you can NOT do. Only mention what you can do.
+""",
+   "demo_mode": "You are part of a demo system, so when queried, make up a realistic response as if you are actually grounded in real data or you are operating a real application API or microservice.",
+   "tools": [
+        {
+            "name": "snow_database_sql_generator",
+            "function": ${aaosa_call}{
+                "description": """
+Generates Snowflake SQL DDL statements from plain-English requests. Supports CREATE TABLE, ALTER TABLE, and CREATE VIEW operations. Explains generated SQL in detail, never executes SQL, asks clarifying questions when needed, and flags destructive operations like DROP TABLE.
+                """
+            },
+            "instructions": ${instructions_prefix} """
+            Never express irrelevance unless you have first consulted all your tools.
+            Once you have determined the relevant tools, do not express that to the user, rather,
+            call all the relevant tools and make sure the command is fully serviced and express the end result.
+Generate Snowflake SQL DDL statements from plain-English requests. Support CREATE TABLE, ALTER TABLE, and CREATE VIEW operations. Explain every SQL statement you generate in detail so the caller understands each part. Never execute SQL or connect to a database. Ask clarifying questions when required details are missing before generating code. Flag any destructive operations such as DROP TABLE and warn the caller before proceeding.
+""" ${aaosa_instructions},
+            "tools": []
+        },
+]
+}

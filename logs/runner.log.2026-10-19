@@ -1,0 +1,177 @@
+2026-10-19 01:08:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - --- Logging error ---
+2026-10-19 01:08:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - Traceback (most recent call last):
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     stream.write(msg + self.terminator)
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-19 01:08:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f514' in position 13: character maps to <undefined>
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Call stack:
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032, in _bootstrap
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self._bootstrap_inner()
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.run()
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 213, in run
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.dispatch_events(self.event_queue)
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 391, in dispatch_events
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     handler.dispatch(event)
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\events.py", line 217, in dispatch
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - getattr(self, f"on_{event.event_type}")(event)
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 51, in on_modified
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.handle_event(RegistryChangeHandler.MODIFIED, event.src_path)
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 73, in handle_event
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.logger.info("\U0001f514 File %s: %s", event_name, src_path)
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Message: '\U0001f514 File %s: %s'
+2026-10-19 01:08:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Arguments: ('modified', 'C:\\Users\\Admin\\neuro-san\\registries\\generated\\snowflake_database_development_assistant.hocon')
+2026-10-19 01:08:04 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Observed events: modified 1, added 0, deleted 0
+2026-10-19 01:08:04 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Updating manifest file: ['C:\Users\Admin\neuro-san\registries\manifest.hocon']
+2026-10-19 01:08:32 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan - {"message": "Manifest file C:\Users\Admin\neuro-san\registries\manifest.hocon restored in 27.53 seconds.", "user_id": "None", "Timestamp": "2026-10-19T01:08:32.336644", "source": "HttpServer", "message_type": "Warning", "request_id": "None"}
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_test_generator
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_test_generator (44969 bytes): 1382960948448
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent tools/internet_info_gatherer
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent tools/internet_info_gatherer (6346 bytes): 1382955204880
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent basic/music_nerd
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent basic/music_nerd (4696 bytes): 1382958925488
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent generated/sql_query_generator
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent generated/sql_query_generator (15181 bytes): 1382953966464
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_designer
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_designer (35999 bytes): 1382960412048
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent generated/snow_database_sql_generator
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent generated/snow_database_sql_generator (12197 bytes): 1382953969248
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent generated/snowflake_database_development_assistant to allowed http service list
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent generated/snowflake_database_development_assistant (19492 bytes): 1382960409600
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent experimental/cruse_theme_agent
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent experimental/cruse_theme_agent (25794 bytes): 1382960944080
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_editor
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_editor (31243 bytes): 1382960412864
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent experimental/cruse_widget_agent
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent experimental/cruse_widget_agent (12899 bytes): 1382960944656
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_query_generator
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_query_generator (8014 bytes): 1382958926832
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_instructions_editor
+2026-10-19 01:08:32 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_instructions_editor (25541 bytes): 1382953972176
+2026-10-19 01:10:59 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Shutting down
+2026-10-19 01:10:59 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Waiting for application shutdown.
+2026-10-19 01:10:59 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-19 01:10:59 - root - INFO - FastAPI is shutting down...
+2026-10-19 01:10:59 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Application shutdown complete.
+2026-10-19 01:10:59 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Finished server process [3744]
+2026-10-19 01:11:01 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Stopping reloader process [5348]
+2026-10-19 01:11:01 India Standard Time | INFO     | NeuroSanRunner:signal_handler:303 - Running cleanup for plugin: ProcessLogBridgePlugin Plugin
+2026-10-19 01:11:01 India Standard Time | INFO     | ProcessLogBridgePlugin:cleanup:87 - [ProcessLogBridgePlugin] Cleaning up
+2026-10-19 01:11:01 India Standard Time | INFO     | ProcessLogBridgePlugin:cleanup:89 - [ProcessLogBridgePlugin] Cleanup complete
+2026-10-19 01:11:27 India Standard Time | INFO     | ProcessLogBridge:_ensure_root_configured:227 - Runner logging initialized (rich console enabled)
+2026-10-19 01:11:27 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Will watch for changes in these directories: ['C:\\Users\\Admin\\neuro-san']
+2026-10-19 01:11:27 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Uvicorn running on http://localhost:4173 (Press CTRL+C to quit)
+2026-10-19 01:11:27 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Started reloader process [14896] using StatReload
+2026-10-19 01:11:40 India Standard Time | INFO     | nsflow:_log:821 - nsflow - C:\Users\Admin\neuro-san\.venv\Lib\site-packages\jwt\api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 14 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+2026-10-19 01:11:40 India Standard Time | INFO     | nsflow:_log:821 - nsflow -   return self._jws.encode(
+2026-10-19 01:11:40 India Standard Time | INFO     | nsflow:_log:821 - nsflow - C:\Users\Admin\neuro-san\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+2026-10-19 01:11:40 India Standard Time | INFO     | nsflow:_log:821 - nsflow -   warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+2026-10-19 01:11:41 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Loading plugin: ProcessLogBridgePlugin from module: neuro_san_studio.plugins.log_bridge.process_log_bridge_plugin
+2026-10-19 01:11:41 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Loaded plugin: ProcessLogBridgePlugin Plugin
+2026-10-19 01:11:41 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Initializing plugin: ProcessLogBridgePlugin Plugin
+2026-10-19 01:11:41 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - [ProcessLogBridgePlugin] Initializing (PID=20148)
+2026-10-19 01:11:41 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - [ProcessLogBridgePlugin] Initialized (PID=20148)
+2026-10-19 01:11:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-19 01:11:43 - root - INFO - frontend_dist_path: C:\Users\Admin\neuro-san\.venv\Lib\site-packages\nsflow\prebuilt_frontend\dist
+2026-10-19 01:11:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-19 01:11:43 - root - INFO - Serving frontend from: C:\Users\Admin\neuro-san\.venv\Lib\site-packages\nsflow\prebuilt_frontend\dist
+2026-10-19 01:11:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Started server process [12956]
+2026-10-19 01:11:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Waiting for application startup.
+2026-10-19 01:11:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-19 01:11:43 - root - INFO - FastAPI is starting up...
+2026-10-19 01:11:44 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-19 01:11:43 - root - INFO - Initializing NeuroSan config from environment variables...
+2026-10-19 01:11:44 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-19 01:11:43 - root - INFO - [Startup] Default NsConfig set to http://localhost:8080
+2026-10-19 01:11:44 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-19 01:11:43 - root - INFO - Initializing local database 'nss_local.db'...
+2026-10-19 01:11:44 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-19 01:11:43 - root - INFO - Local database 'nss_local.db' initialized
+2026-10-19 01:11:44 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Application startup complete.
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Manifest file C:\Users\Admin\neuro-san\registries\manifest.hocon restored in 29.21 seconds.
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Reading C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\deploy\logging.hocon
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - GIL state at server startup:  standard CPython build (GIL always enabled). CPython 3.12.10.  PYTHON_GIL=unset
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Using Authorizer: neuro_san.service.authorization.null.always_yes_authorizer.AlwaysYesAuthorizer
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - >>>>>>>>>>>> Enabling MCP service...
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_test_generator to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_test_generator (45033 bytes): 2343973152592
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent tools/internet_info_gatherer to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent tools/internet_info_gatherer (6402 bytes): 2343973155328
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent generated/snow_database_sql_generator to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent generated/snow_database_sql_generator (12205 bytes): 2343973144096
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent basic/music_nerd to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent basic/music_nerd (4720 bytes): 2343973151008
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_designer to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_designer (36031 bytes): 2343973146400
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent generated/sql_query_generator to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent generated/sql_query_generator (15181 bytes): 2343973153024
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent generated/snowflake_database_development_assistant to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent generated/snowflake_database_development_assistant (19508 bytes): 2343953560592
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_instructions_editor to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_instructions_editor (25589 bytes): 2343973147696
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent experimental/cruse_theme_agent to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent experimental/cruse_theme_agent (25866 bytes): 2343973155424
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent experimental/cruse_widget_agent to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent experimental/cruse_widget_agent (12987 bytes): 2343973142992
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_query_generator to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_query_generator (8062 bytes): 2343973151680
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_editor to allowed http service list
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_editor (31283 bytes): 2343973151968
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting HTTP server instance (worker_id=0 of 1, pid=20148)
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: HTTP server is running 1 instances on port 8080 with backlog 128
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: HTTP server idle connections timeout: 3600 seconds
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: HTTP server is shutting down after 909380 requests
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: MCP server is running protocol 2025-06-18
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting StorageWatcher with 5 seconds period
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting RegistryStorageUpdater for ['C:\Users\Admin\neuro-san\registries\manifest.hocon'] with 5 seconds period
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - {"message": "Registry polling watchdog started on: C:\Users\Admin\neuro-san\registries for manifest ['C:\\Users\\Admin\\neuro-san\\registries\\manifest.hocon'] with polling every 1 sec", "user_id": "None", "Timestamp": "2026-10-19T01:12:10.508741", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting TempNetworkStorageUpdater
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Waiting for new queues to be added for processing
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting EventWorkMonitor with 0.500000 seconds period
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting PeriodicEventInitiator with 1.000000 seconds period
+2026-10-19 01:12:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Found 0 periodic agent interactions
+2026-10-19 01:12:10 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan:HttpServer: HealthProbeServer failed to bind port 8081 (reuse_port=True): the platform doesn't support SO_REUSEPORT
+2026-10-19 01:12:12 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Start /api/v1/list
+2026-10-19 01:12:12 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] 200 GET /api/v1/list (::1) 10.49ms
+2026-10-19 01:12:12 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Finish /api/v1/list
+2026-10-19 01:12:27 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Start /api/v1/list
+2026-10-19 01:12:27 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] 200 GET /api/v1/list (::1) 8.19ms
+2026-10-19 01:12:27 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Finish /api/v1/list
+2026-10-19 01:12:37 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Start generated/snowflake_database_development_assistant/connectivity
+2026-10-19 01:12:37 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Received a generated/snowflake_database_development_assistant.Connectivity request for connectivity request
+2026-10-19 01:12:37 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Agent network 'generated/snowflake_database_development_assistant' (ID: 2343953560592) used for operation: connectivity
+2026-10-19 01:12:37 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Done with generated/snowflake_database_development_assistant.Connectivity request for connectivity request
+2026-10-19 01:12:37 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] 200 GET /api/v1/generated/snowflake_database_development_assistant/connectivity (::1) 5364.44ms
+2026-10-19 01:12:37 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Finish generated/snowflake_database_development_assistant/connectivity
+2026-10-19 01:12:38 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Start generated/snowflake_database_development_assistant/connectivity
+2026-10-19 01:12:38 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Received a generated/snowflake_database_development_assistant.Connectivity request for connectivity request
+2026-10-19 01:12:38 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Agent network 'generated/snowflake_database_development_assistant' (ID: 2343953560592) used for operation: connectivity
+2026-10-19 01:12:38 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Done with generated/snowflake_database_development_assistant.Connectivity request for connectivity request
+2026-10-19 01:12:38 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] 200 GET /api/v1/generated/snowflake_database_development_assistant/connectivity (::1) 7.59ms
+2026-10-19 01:12:38 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Finish generated/snowflake_database_development_assistant/connectivity
+2026-10-19 01:13:55 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Start generated/snowflake_database_development_assistant/streaming_chat
+2026-10-19 01:13:55 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Received a generated/snowflake_database_development_assistant.StreamingChat request for 'Create a Snowflake table named `CUSTOMER_ORDERS` with columns `ORDER_ID NUMBER`, `CUSTOMER_ID NUMBER`, and `ORDER_AMOUNT NUMBER(10,2)`. Generate the SQL, run the SQL policy validator on the generated statement, and have the SQL reviewer independently review the SQL and validator findings. Return the SQL, validator result, and review verdict. Do not execute anything against a database.'
+2026-10-19 01:13:55 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Agent network 'generated/snowflake_database_development_assistant' (ID: 2343953560592) used for operation: streaming_chat
+2026-10-19 01:13:55 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Agent network 'generated/snow_database_sql_generator' (ID: 2343973144096) used for operation: function
+2026-10-19 01:13:58 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Received session ID: e46ec759-77aa-4651-9111-55f2de6228850
+2026-10-19 01:13:58 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Negotiated protocol version: 2025-03-26
+2026-10-19 01:13:59 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: GET stream disconnected, reconnecting in 1000ms...
+2026-10-19 01:14:01 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: Session termination failed: 202
+2026-10-19 01:14:09 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model cohere/north-mini-code:free in llm info. Token cost defaults to 0.
+2026-10-19 01:14:09 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Agent network 'generated/snow_database_sql_generator' (ID: 2343973144096) used for operation: streaming_chat
+2026-10-19 01:14:14 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model nvidia/nemotron-3.5-content-safety:free in llm info. Token cost defaults to 0.
+2026-10-19 01:14:14 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model nvidia/nemotron-3.5-content-safety:free in llm info. Token cost defaults to 0.
+2026-10-19 01:14:27 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model dots-studio/dots-3-note-preview:free in llm info. Token cost defaults to 0.
+2026-10-19 01:14:27 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Agent network 'generated/snow_database_sql_generator' (ID: 2343973144096) used for operation: streaming_chat
+2026-10-19 01:14:48 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model nvidia/nemotron-3.5-super-vl:free in llm info. Token cost defaults to 0.
+2026-10-19 01:14:48 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model nvidia/nemotron-3.5-super-vl:free in llm info. Token cost defaults to 0.
+2026-10-19 01:14:51 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model cohere/north-mini-code:free in llm info. Token cost defaults to 0.
+2026-10-19 01:14:51 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Calling class sql_validator.SqlValidator
+2026-10-19 01:14:51 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: AGENT_TOOL_PATH_ONLY is not enabled: CodedTool 'class' references can resolve via fully-qualified import from anywhere on the PYTHONPATH. Set AGENT_TOOL_PATH_ONLY=true to restrict resolution to the AGENT_TOOL_PATH hierarchy.
+2026-10-19 01:14:53 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model dots-studio/dots-3-note-preview:free in llm info. Token cost defaults to 0.
+2026-10-19 01:15:38 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model dots-studio/dots-3-note-preview:free in llm info. Token cost defaults to 0.
+2026-10-19 01:15:38 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: No price info found for model dots-studio/dots-3-note-preview:free in llm info. Token cost defaults to 0.
+2026-10-19 01:15:39 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: Retrying: the LLM provider rate-limited the request (TooManyRequestsResponseError) - Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+2026-10-19 01:15:39 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: Retrying: the LLM provider rate-limited the request (TooManyRequestsResponseError) - Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+2026-10-19 01:15:39 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan:HttpServer: Retrying: the LLM provider rate-limited the request (TooManyRequestsResponseError) - Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+2026-10-19 01:15:39 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan: time_taken_in_seconds includes overhead from Langchain and Neuro SAN
+2026-10-19 01:15:39 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan: time_taken_in_seconds includes overhead from Langchain and Neuro SAN
+2026-10-19 01:15:39 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: {"token_accounting": {"total_tokens": 14727, "prompt_tokens": 9132, "completion_tokens": 5595, "successful_requests": 5, "empty_responses": 0, "total_cost": 0.0, "time_taken_in_seconds": 96.162437915802, "caveats": ["Token usage from agents of the main agent network only. Usage from external agents is not included.", "Token counts are approximate and estimated using tiktoken."]}, "total_token_accounting": {"total_tokens": 16919, "prompt_tokens": 10358, "completion_tokens": 6561, "successful_requests": 7, "empty_responses": 0, "total_cost": 0.0, "time_taken_in_seconds": 96.162437915802, "caveats": ["Request total: includes token usage from external agents invoked via direct sessions on this server. Usage from external agents reached over the network is not included.", "Token counts are approximate and estimated using tiktoken."], "models": {"ChatOpenRouter": {"nvidia/nemotron-3.5-content-safety:free": {"total_tokens": 742, "prompt_tokens": 514, "completion_tokens": 228, "successful_requests": 1, "empty_responses": 0, "total_cost": 0.0, "time_taken_in_seconds": 3.4516565799713135}, "nvidia/nemotron-3.5-super-vl:free": {"total_tokens": 1450, "prompt_tokens": 712, "completion_tokens": 738, "successful_requests": 1, "empty_responses": 0, "total_cost": 0.0, "time_taken_in_seconds": 18.34599232673645}, "dots-studio/dots-3-note-preview:free": {"total_tokens": 10510, "prompt_tokens": 5294, "completion_tokens": 5216, "successful_requests": 3, "empty_responses": 0, "total_cost": 0.0, "time_taken_in_seconds": 58.82124328613281}, "cohere/north-mini-code:free": {"total_tokens": 4217, "prompt_tokens": 3838, "completion_tokens": 379, "successful_requests": 2, "empty_responses": 0, "total_cost": 0.0, "time_taken_in_seconds": 8.51272463798523}}}}}
+2026-10-19 01:15:39 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Done with generated/snowflake_database_development_assistant.StreamingChat request for 'Create a Snowflake table named `CUSTOMER_ORDERS` with columns `ORDER_ID NUMBER`, `CUSTOMER_ID NUMBER`, and `ORDER_AMOUNT NUMBER(10,2)`. Generate the SQL, run the SQL policy validator on the generated statement, and have the SQL reviewer independently review the SQL and validator findings. Return the SQL, validator result, and review verdict. Do not execute anything against a database.'
+2026-10-19 01:15:39 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] 200 POST /api/v1/generated/snowflake_database_development_assistant/streaming_chat (::1) 103870.24ms
+2026-10-19 01:15:39 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Finish generated/snowflake_database_development_assistant/streaming_chat
+2026-10-19 01:15:39 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Stats: {'NumProcessing': 0, 'Total': 5, '/api/v1/list': 2, 'generated/snowflake_database_development_assistant/connectivity': 2, 'generated/snowflake_database_development_assistant/streaming_chat': 1}

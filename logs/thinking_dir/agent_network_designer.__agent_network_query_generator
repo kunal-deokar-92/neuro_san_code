@@ -1,0 +1,21 @@
+Agent: agent_network_designer.__agent_network_query_generator
+
+[AGENT] @ 2026-10-18 18:21:10:
+Received arguments:
+```json
+{
+    "tool_args": {
+        "agent_network_description": "snowflake_database_development_assistant"
+    },
+    "tool_start": true
+}
+```
+
+[AGENT] @ 2026-10-18 18:21:19:
+Got result:
+```json
+{
+    "tool_end": true,
+    "tool_output": "The sample queries have been set."
+}
+```

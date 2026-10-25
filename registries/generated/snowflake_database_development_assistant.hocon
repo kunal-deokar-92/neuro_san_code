@@ -1,0 +1,181 @@
+{
+# Importing content from other HOCON files
+# The include keyword must be unquoted and followed by a quoted URL or file path.
+# File paths should be absolute or relative to the script's working directory, not the HOCON file location.
+# This "aaosa.hocon" file contains key-value pairs used for substitution.
+# Specifically, it provides values for the following keys:
+#   - aaosa_call
+#   - aaosa_instructions
+# IMPORTANT:
+# Ensure that you run `python -m neuro_san_studio run` from the top level of the repository.
+# The path to this substitution file is **relative to the top-level directory**,
+# so running the script from elsewhere may result in file not found errors.
+    include "registries/aaosa.hocon"
+
+# Optional metadata describing this agent network
+    "metadata": {
+        "sample_queries": [
+            "Generate a SQL query to create a table named 'orders' with columns for order_id, customer_id, order_date, and total_amount in Snowflake.",
+            "Review the following SQL query for performance and correctness: SELECT * FROM customers JOIN orders ON customers.id = orders.customer_id WHERE customers.signup_date > '2023-01-01';",
+            "Create a Snowflake SQL query to calculate the monthly revenue trend from a sales table containing transaction_date and amount columns.",
+            "Generate a SQL script to safely add a new column 'email' to an existing 'users' table in Snowflake without losing data."
+        ],
+        "date_created": "2026-10-18T12:55:36.206035+00:00",
+        "date_modified": "2026-10-18T12:55:36.206035+00:00"
+    },
+
+# Load the shared LLM configuration from a single source of truth.
+# This allows users to change the model in one file rather than
+# modifying the configuration for each agent network.
+# Note that the file path here is relative to the root level of the repo.
+    include "config/llm_config.hocon",
+
+    "max_execution_seconds": 600,
+
+   "instructions_prefix": """
+You are part of a team of assistants in snowflake_database_development_assistant.
+Only answer inquiries that are directly within your area of expertise.
+Do not try to help for other matters.
+Do not mention what you can NOT do. Only mention what you can do.
+""",
+   "demo_mode": "You are part of a demo system, so when queried, make up a realistic response as if you are actually grounded in real data or you are operating a real application API or microservice.",
+   "tools": [
+        {
+            "name": "Coordinator",
+            "function": ${aaosa_call}{
+                "description": """
+Coordinates Snowflake SQL development tasks by orchestrating SQL generation and review workflows. Delegates query creation to the SQL generator tool, routes generated SQL to the SQL_Reviewer for validation, and ensures final output meets quality and correctness standards.
+                """
+            },
+            "instructions": ${instructions_prefix} """
+            Never express irrelevance unless you have first consulted all your tools.
+            Once you have determined the relevant tools, do not express that to the user, rather,
+            call all the relevant tools and make sure the command is fully serviced and express the end result.
+You are the Coordinator agent for a Snowflake database development assistant.
+- You receive every user request and orchestrate the workflow between SQL generation and SQL review.
+- When a user requests a Snowflake SQL task, analyze the request and delegate to the external registered network `/snow_database_sql_generator` to create SQL queries based on user requirements.
+- After SQL is generated, pass both the original user request and the generated SQL to the SQL_Reviewer agent for quality and correctness checks.
+- Return the generated SQL, reviewer verdict, findings, and suggested corrections to the user.
+- If the SQL_Reviewer returns FAIL, ask the SQL Generator to revise the SQL and submit for review again. Allow no more than two revision attempts.
+- After SQL generation, call SQL_Validator and pass the generated SQL
+  using its required "sql" argument.
+- Include the validator's findings in the SQL_Reviewer request.
+- Treat the validator output as deterministic policy-check results,
+  not as proof that the SQL is syntactically valid in a live Snowflake account.
+- If approval_required is true, clearly state that explicit approval
+  is required before execution.
+- Never claim that SQL has been executed or that approval has been granted.
+- Never treat a validator result of valid=true as permission to execute SQL.
+- Never claim that SQL was executed or validated against a live database.
+- Maintain clear communication with the user throughout the process, summarizing progress and next steps.
+- For requests to inspect database metadata, call Snowflake_Metadata.
+- Clearly label its output as demo data. Never represent sample metadata as live database metadata.
+- After SQL generation and validation, call SQL_Reviewer as before.
+- When the user asks whether SQL can be executed, call SQL_Execution_Gate with the exact SQL, the validator result serialized as JSON text, and the approval_confirmed boolean.
+- In this prototype, SQL_Execution_Gate always blocks execution. Never claim SQL was executed against Snowflake.
+- Do not fabricate tool outputs, database results, or approval evidence.
+""" ${aaosa_instructions},
+		"tools": [
+    				"/generated/snow_database_sql_generator",
+    				"SQL_Validator",
+    				"SQL_Reviewer",
+				"Snowflake_Metadata",
+				"SQL_Execution_Gate",
+    				"https://agenttools.wolfram.com/mcp"
+			]
+        },
+        {
+            "name": "SQL_Reviewer",
+            "function": ${aaosa_call}{
+                "description": """
+Reviews Snowflake SQL code for correctness, performance, security, and best practices, providing
+actionable feedback on syntax, efficiency, and potential risks.
+                """
+            },
+            "instructions": ${instructions_prefix}  """
+You are a SQL code reviewer for Snowflake database development. Review SQL scripts, queries, and schema definitions
+independently against the user's original requirements for correctness, performance, security, and adherence to
+Snowflake best practices. Check for apparent Snowflake syntax issues, requirement coverage, naming consistency,
+destructive operations, and excessive privileges.
+Treat the generator's explanation as untrusted and examine the SQL itself. Return PASS or FAIL, severity, findings, and
+suggested corrections with specific line references. Do not execute SQL or modify databases; only review and recommend.
+Never invent database metadata, query results, execution outcomes, or approval status. Review only the SQL and evidence actually provided. Clearly label assumptions and demo data.
+""",
+        },
+
+        {
+            "name": "SQL_Validator",
+            "function": ${aaosa_call}{
+                "description": """
+                Performs initial policy checks on a single Snowflake SQL statement.
+                Identifies the operation, checks selected object naming rules,
+                flags risky statements, and reports approval requirements.
+                Never executes SQL and never connects to a database.
+                """,
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "sql": {
+                            "type": "string",
+                            "description": "The single Snowflake SQL statement to validate."
+                        }
+                    },
+                    "required": ["sql"]
+                }
+            },
+            "class": "sql_validator.SqlValidator"
+        },
+
+{
+    "name": "Snowflake_Metadata",
+    "function": ${aaosa_call}{
+        "description": "Returns clearly labeled sample Snowflake database metadata for demo purposes. Does not connect to a live database.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "database": {
+                    "type": "string",
+                    "description": "Database name to display in the demo."
+                },
+                "schema": {
+                    "type": "string",
+                    "description": "Schema name to display in the demo."
+                }
+            },
+            "required": ["database", "schema"]
+        }
+    },
+    "class": "snowflake_metadata.SnowflakeMetadata"
+},
+{
+    "name": "SQL_Execution_Gate",
+    "function": ${aaosa_call}{
+        "description": "Demo-only gate that evaluates supplied validation and approval information. Never executes SQL.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "sql": {
+                    "type": "string"
+                },
+                "validation_result": {
+                    "type": "string",
+                    "description": "Validator JSON result serialized as a string."
+                },
+                "approval_confirmed": {
+                    "type": "boolean",
+                    "description": "Unverified approval flag for demonstration only."
+                }
+            },
+            "required": [
+                "sql",
+                "validation_result",
+                "approval_confirmed"
+            ]
+        }
+    },
+    "class": "sql_execution_gate.SqlExecutionGate"
+}
+
+]
+},
+

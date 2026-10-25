@@ -1,0 +1,338 @@
+2026-10-17 16:41:56 India Standard Time | INFO     | ProcessLogBridge:_ensure_root_configured:227 - Runner logging initialized (rich console enabled)
+2026-10-17 16:41:57 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Will watch for changes in these directories: ['C:\\Users\\Admin\\neuro-san']
+2026-10-17 16:41:57 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Uvicorn running on http://localhost:4173 (Press CTRL+C to quit)
+2026-10-17 16:41:57 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Started reloader process [6484] using StatReload
+2026-10-17 16:42:07 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Loading plugin: ProcessLogBridgePlugin from module: neuro_san_studio.plugins.log_bridge.process_log_bridge_plugin
+2026-10-17 16:42:07 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Loaded plugin: ProcessLogBridgePlugin Plugin
+2026-10-17 16:42:07 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Initializing plugin: ProcessLogBridgePlugin Plugin
+2026-10-17 16:42:07 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - [ProcessLogBridgePlugin] Initializing (PID=1392)
+2026-10-17 16:42:07 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - [ProcessLogBridgePlugin] Initialized (PID=1392)
+2026-10-17 16:42:07 India Standard Time | INFO     | nsflow:_log:821 - nsflow - C:\Users\Admin\neuro-san\.venv\Lib\site-packages\jwt\api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 14 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+2026-10-17 16:42:07 India Standard Time | INFO     | nsflow:_log:821 - nsflow -   return self._jws.encode(
+2026-10-17 16:42:07 India Standard Time | INFO     | nsflow:_log:821 - nsflow - C:\Users\Admin\neuro-san\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+2026-10-17 16:42:07 India Standard Time | INFO     | nsflow:_log:821 - nsflow -   warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:42:09 - root - INFO - frontend_dist_path: C:\Users\Admin\neuro-san\.venv\Lib\site-packages\nsflow\prebuilt_frontend\dist
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:42:09 - root - INFO - Serving frontend from: C:\Users\Admin\neuro-san\.venv\Lib\site-packages\nsflow\prebuilt_frontend\dist
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Started server process [2396]
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Waiting for application startup.
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:42:09 - root - INFO - FastAPI is starting up...
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:42:09 - root - INFO - Initializing NeuroSan config from environment variables...
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:42:09 - root - INFO - [Startup] Default NsConfig set to http://localhost:8080
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:42:09 - root - INFO - Initializing local database 'nss_local.db'...
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:42:09 - root - INFO - Local database 'nss_local.db' initialized
+2026-10-17 16:42:09 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     Application startup complete.
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Manifest file C:\Users\Admin\neuro-san\registries\manifest.hocon restored in 17.93 seconds.
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Reading C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\deploy\logging.hocon
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - GIL state at server startup:  standard CPython build (GIL always enabled). CPython 3.12.10.  PYTHON_GIL=unset
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Using Authorizer: neuro_san.service.authorization.null.always_yes_authorizer.AlwaysYesAuthorizer
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - >>>>>>>>>>>> Enabling MCP service...
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_designer to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_designer (36023 bytes): 2889632990368
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent tools/internet_info_gatherer to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent tools/internet_info_gatherer (6370 bytes): 2889633286480
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent basic/music_nerd to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent basic/music_nerd (4720 bytes): 2889632996032
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_test_generator to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_test_generator (44993 bytes): 2889633004864
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_query_generator to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_query_generator (8038 bytes): 2889633296704
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_instructions_editor to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_instructions_editor (25565 bytes): 2889480321360
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent experimental/cruse_theme_agent to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent experimental/cruse_theme_agent (25818 bytes): 2889633005296
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent agent_network_editor to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent agent_network_editor (31267 bytes): 2889632991904
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent experimental/cruse_widget_agent to allowed http service list
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent experimental/cruse_widget_agent (12923 bytes): 2889632999344
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting HTTP server instance (worker_id=0 of 1, pid=1392)
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: HTTP server is running 1 instances on port 8080 with backlog 128
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: HTTP server idle connections timeout: 3600 seconds
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: HTTP server is shutting down after 1030619 requests
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: MCP server is running protocol 2025-06-18
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting StorageWatcher with 5 seconds period
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting RegistryStorageUpdater for ['C:\Users\Admin\neuro-san\registries\manifest.hocon'] with 5 seconds period
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - {"message": "Registry polling watchdog started on: C:\Users\Admin\neuro-san\registries for manifest ['C:\\Users\\Admin\\neuro-san\\registries\\manifest.hocon'] with polling every 1 sec", "user_id": "None", "Timestamp": "2026-10-17T16:42:25.285245", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting TempNetworkStorageUpdater
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Waiting for new queues to be added for processing
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting EventWorkMonitor with 0.500000 seconds period
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Starting PeriodicEventInitiator with 1.000000 seconds period
+2026-10-17 16:42:25 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan:HttpServer: HealthProbeServer failed to bind port 8081 (reuse_port=True): the platform doesn't support SO_REUSEPORT
+2026-10-17 16:42:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Found 0 periodic agent interactions
+2026-10-17 16:46:14 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53482 - "GET /?utm_source=chatgpt.com HTTP/1.1" 200 OK
+2026-10-17 16:46:14 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53482 - "GET /assets/index.js HTTP/1.1" 200 OK
+2026-10-17 16:46:14 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:55314 - "GET /assets/index.css HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53482 - "GET /api/v1/vite_config.json HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53482 - "GET /api/v1/version/nsflow HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:50816 - "GET /api/v1/ping HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:55314 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53482 - "GET /api/v1/ping HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:50816 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:50816 - "GET /api/v1/version/nsflow HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:55314 - "GET /api/v1/mcp/oauth/redirect_uri HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53482 - "GET /api/v1/mcp/oauth/connections HTTP/1.1" 200 OK
+2026-10-17 16:46:19 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53524 - "GET /api/v1/version/neuro-san HTTP/1.1" 200 OK
+2026-10-17 16:46:20 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:50816 - "GET /nsflow.svg HTTP/1.1" 200 OK
+2026-10-17 16:46:20 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53482 - "GET /api/v1/version/neuro-san HTTP/1.1" 200 OK
+2026-10-17 16:46:20 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:54270 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+2026-10-17 16:46:20 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53482 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+2026-10-17 16:46:20 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Start /api/v1/list
+2026-10-17 16:46:20 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] 200 GET /api/v1/list (::1) 64.18ms
+2026-10-17 16:46:20 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Finish /api/v1/list
+2026-10-17 16:46:20 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:46:20 - httpx - INFO - HTTP Request: GET http://localhost:8080/api/v1/list "HTTP/1.1 200 OK"
+2026-10-17 16:46:20 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:53958 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 200 OK
+2026-10-17 16:51:34 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:34 - root - INFO - Received audio file: recording.mp3, content-type: audio/webm;codecs=pcm
+2026-10-17 16:51:34 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:34 - root - INFO - Audio file size: 59937 bytes
+2026-10-17 16:51:34 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:34 - root - INFO - Detected audio format: webm
+2026-10-17 16:51:34 India Standard Time | WARNING  | nsflow:_log:819 - nsflow - 2026-10-17 16:51:34 - root - WARNING - Failed to load audio as webm: [WinError 2] The system cannot find the file specified
+2026-10-17 16:51:34 India Standard Time | ERROR    | nsflow:_log:817 - nsflow - 2026-10-17 16:51:34 - root - ERROR - Failed to load audio generically: [WinError 2] The system cannot find the file specified
+2026-10-17 16:51:34 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:34 - root - INFO - Loaded webM audio as raw format
+2026-10-17 16:51:34 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:34 - root - INFO - Audio duration: 0.62 seconds, channels: 1, frame_rate: 48000
+2026-10-17 16:51:34 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:34 - root - INFO - Applying audio preprocessing for better speech recognition...
+2026-10-17 16:51:34 India Standard Time | ERROR    | nsflow:_log:817 - nsflow - 2026-10-17 16:51:34 - root - ERROR - Error in speech_to_text: not a whole number of frames
+2026-10-17 16:51:34 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:61559 - "POST /api/v1/speech_to_text HTTP/1.1" 500 Internal Server Error
+2026-10-17 16:51:39 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:39 - root - INFO - Received audio file: recording.mp3, content-type: audio/webm;codecs=pcm
+2026-10-17 16:51:39 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:39 - root - INFO - Audio file size: 67645 bytes
+2026-10-17 16:51:39 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:39 - root - INFO - Detected audio format: webm
+2026-10-17 16:51:39 India Standard Time | WARNING  | nsflow:_log:819 - nsflow - 2026-10-17 16:51:39 - root - WARNING - Failed to load audio as webm: [WinError 2] The system cannot find the file specified
+2026-10-17 16:51:39 India Standard Time | ERROR    | nsflow:_log:817 - nsflow - 2026-10-17 16:51:39 - root - ERROR - Failed to load audio generically: [WinError 2] The system cannot find the file specified
+2026-10-17 16:51:39 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:61559 - "POST /api/v1/speech_to_text HTTP/1.1" 500 Internal Server Error
+2026-10-17 16:51:39 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:39 - root - INFO - Loaded webM audio as raw format
+2026-10-17 16:51:39 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:39 - root - INFO - Audio duration: 0.70 seconds, channels: 1, frame_rate: 48000
+2026-10-17 16:51:39 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:39 - root - INFO - Applying audio preprocessing for better speech recognition...
+2026-10-17 16:51:39 India Standard Time | ERROR    | nsflow:_log:817 - nsflow - 2026-10-17 16:51:39 - root - ERROR - Error in speech_to_text: not a whole number of frames
+2026-10-17 16:51:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:43 - root - INFO - Received audio file: recording.mp3, content-type: audio/webm;codecs=pcm
+2026-10-17 16:51:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:43 - root - INFO - Audio file size: 38709 bytes
+2026-10-17 16:51:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:43 - root - INFO - Detected audio format: webm
+2026-10-17 16:51:43 India Standard Time | WARNING  | nsflow:_log:819 - nsflow - 2026-10-17 16:51:43 - root - WARNING - Failed to load audio as webm: [WinError 2] The system cannot find the file specified
+2026-10-17 16:51:43 India Standard Time | ERROR    | nsflow:_log:817 - nsflow - 2026-10-17 16:51:43 - root - ERROR - Failed to load audio generically: [WinError 2] The system cannot find the file specified
+2026-10-17 16:51:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:43 - root - INFO - Loaded webM audio as raw format
+2026-10-17 16:51:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:61559 - "POST /api/v1/speech_to_text HTTP/1.1" 500 Internal Server Error
+2026-10-17 16:51:43 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 16:51:43 - root - INFO - Audio duration: 0.40 seconds, channels: 1, frame_rate: 48000
+2026-10-17 16:51:43 India Standard Time | ERROR    | nsflow:_log:817 - nsflow - 2026-10-17 16:51:43 - root - ERROR - Error in speech_to_text: 400: Audio file is too short (0.40 seconds). Please provide a longer audio.
+2026-10-17 17:13:30 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:49693 - "POST /api/v1/set_ns_config HTTP/1.1" 200 OK
+2026-10-17 17:13:30 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Start /api/v1/list
+2026-10-17 17:13:30 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] 200 GET /api/v1/list (::1) 46.87ms
+2026-10-17 17:13:30 India Standard Time | INFO     | nsflow:_log:821 - nsflow - 2026-10-17 17:13:30 - httpx - INFO - HTTP Request: GET http://localhost:8080/api/v1/list "HTTP/1.1 200 OK"
+2026-10-17 17:13:30 India Standard Time | INFO     | nsflow:_log:821 - nsflow - INFO:     127.0.0.1:49693 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 200 OK
+2026-10-17 17:13:30 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: [0] Finish /api/v1/list
+2026-10-17 17:13:52 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - --- Logging error ---
+2026-10-17 17:13:52 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - Traceback (most recent call last):
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     stream.write(msg + self.terminator)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17 17:13:52 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f514' in position 13: character maps to <undefined>
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Call stack:
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032, in _bootstrap
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self._bootstrap_inner()
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.run()
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 213, in run
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.dispatch_events(self.event_queue)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 391, in dispatch_events
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     handler.dispatch(event)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\events.py", line 217, in dispatch
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - getattr(self, f"on_{event.event_type}")(event)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 51, in on_modified
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.handle_event(RegistryChangeHandler.MODIFIED, event.src_path)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 73, in handle_event
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.logger.info("\U0001f514 File %s: %s", event_name, src_path)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Message: '\U0001f514 File %s: %s'
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Arguments: ('modified', 'C:\\Users\\Admin\\neuro-san\\registries\\generated\\manifest.hocon')
+2026-10-17 17:13:52 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - --- Logging error ---
+2026-10-17 17:13:52 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - Traceback (most recent call last):
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     stream.write(msg + self.terminator)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17 17:13:52 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f514' in position 13: character maps to <undefined>
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Call stack:
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032, in _bootstrap
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self._bootstrap_inner()
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.run()
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 213, in run
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.dispatch_events(self.event_queue)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 391, in dispatch_events
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     handler.dispatch(event)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\events.py", line 217, in dispatch
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - getattr(self, f"on_{event.event_type}")(event)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 57, in on_created
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.handle_event(RegistryChangeHandler.CREATED, event.src_path)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 73, in handle_event
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.logger.info("\U0001f514 File %s: %s", event_name, src_path)
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Message: '\U0001f514 File %s: %s'
+2026-10-17 17:13:52 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Arguments: ('created', 'C:\\Users\\Admin\\neuro-san\\registries\\generated\\sql_query_generator.hocon')
+2026-10-17 17:13:55 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Observed events: modified 1, added 1, deleted 0
+2026-10-17 17:13:55 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Updating manifest file: ['C:\Users\Admin\neuro-san\registries\manifest.hocon']
+2026-10-17 17:14:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - --- Logging error ---
+2026-10-17 17:14:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - Traceback (most recent call last):
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     stream.write(msg + self.terminator)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17 17:14:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f514' in position 13: character maps to <undefined>
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Call stack:
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032, in _bootstrap
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self._bootstrap_inner()
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.run()
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 213, in run
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.dispatch_events(self.event_queue)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 391, in dispatch_events
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     handler.dispatch(event)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\events.py", line 217, in dispatch
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - getattr(self, f"on_{event.event_type}")(event)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 63, in on_deleted
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.handle_event(RegistryChangeHandler.DELETED, event.src_path)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 73, in handle_event
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.logger.info("\U0001f514 File %s: %s", event_name, src_path)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Message: '\U0001f514 File %s: %s'
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Arguments: ('deleted', 'C:\\Users\\Admin\\neuro-san\\registries\\generated\\sql_query_generator.hocon')
+2026-10-17 17:14:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - --- Logging error ---
+2026-10-17 17:14:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - Traceback (most recent call last):
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     stream.write(msg + self.terminator)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17 17:14:01 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f514' in position 13: character maps to <undefined>
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Call stack:
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032, in _bootstrap
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self._bootstrap_inner()
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.run()
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 213, in run
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.dispatch_events(self.event_queue)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 391, in dispatch_events
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     handler.dispatch(event)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\events.py", line 217, in dispatch
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - getattr(self, f"on_{event.event_type}")(event)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 57, in on_created
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.handle_event(RegistryChangeHandler.CREATED, event.src_path)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 73, in handle_event
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.logger.info("\U0001f514 File %s: %s", event_name, src_path)
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Message: '\U0001f514 File %s: %s'
+2026-10-17 17:14:01 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Arguments: ('created', 'C:\\Users\\Admin\\neuro-san\\registries\\generated\\sql_query_generator.hocon')
+2026-10-17 17:14:10 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan - {"message": "Manifest file C:\Users\Admin\neuro-san\registries\manifest.hocon restored in 15.04 seconds.", "user_id": "None", "Timestamp": "2026-10-17T17:14:10.545933", "source": "HttpServer", "message_type": "Warning", "request_id": "None"}
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent tools/internet_info_gatherer
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent tools/internet_info_gatherer (6410 bytes): 2889613491520
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent basic/music_nerd
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent basic/music_nerd (4712 bytes): 2889636183456
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent generated/sql_query_generator to allowed http service list
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent generated/sql_query_generator (15181 bytes): 2889636180816
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_designer
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_designer (36015 bytes): 2889636178944
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_test_generator
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_test_generator (45041 bytes): 2889635580768
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_query_generator
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_query_generator (8070 bytes): 2889632209408
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_instructions_editor
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_instructions_editor (25589 bytes): 2889635591520
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent experimental/cruse_theme_agent
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent experimental/cruse_theme_agent (25866 bytes): 2889635592144
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_editor
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_editor (31259 bytes): 2889633653264
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent experimental/cruse_widget_agent
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent experimental/cruse_widget_agent (12979 bytes): 2889635413312
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Observed events: modified 0, added 1, deleted 1
+2026-10-17 17:14:10 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Updating manifest file: ['C:\Users\Admin\neuro-san\registries\manifest.hocon']
+2026-10-17 17:14:25 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan - {"message": "Manifest file C:\Users\Admin\neuro-san\registries\manifest.hocon restored in 15.42 seconds.", "user_id": "None", "Timestamp": "2026-10-17T17:14:25.971737", "source": "HttpServer", "message_type": "Warning", "request_id": "None"}
+2026-10-17 17:14:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent tools/internet_info_gatherer
+2026-10-17 17:14:25 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent tools/internet_info_gatherer (6410 bytes): 2889636170400
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent basic/music_nerd
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent basic/music_nerd (4720 bytes): 2889636180528
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent generated/sql_query_generator
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent generated/sql_query_generator (15181 bytes): 2889636180048
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_designer
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_designer (36023 bytes): 2889636702512
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_test_generator
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_test_generator (45041 bytes): 2889636457472
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_query_generator
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_query_generator (8062 bytes): 2889636454496
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_instructions_editor
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_instructions_editor (25589 bytes): 2889636454400
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent experimental/cruse_theme_agent
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent experimental/cruse_theme_agent (25874 bytes): 2889636454688
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_editor
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_editor (31283 bytes): 2889636707936
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent experimental/cruse_widget_agent
+2026-10-17 17:14:26 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent experimental/cruse_widget_agent (12979 bytes): 2889636707792
+2026-10-17 17:19:48 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - --- Logging error ---
+2026-10-17 17:19:48 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - Traceback (most recent call last):
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     stream.write(msg + self.terminator)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17 17:19:48 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f514' in position 13: character maps to <undefined>
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Call stack:
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032, in _bootstrap
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self._bootstrap_inner()
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.run()
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 213, in run
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.dispatch_events(self.event_queue)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 391, in dispatch_events
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     handler.dispatch(event)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\events.py", line 217, in dispatch
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - getattr(self, f"on_{event.event_type}")(event)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 51, in on_modified
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.handle_event(RegistryChangeHandler.MODIFIED, event.src_path)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 73, in handle_event
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.logger.info("\U0001f514 File %s: %s", event_name, src_path)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Message: '\U0001f514 File %s: %s'
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Arguments: ('modified', 'C:\\Users\\Admin\\neuro-san\\registries\\generated\\manifest.hocon')
+2026-10-17 17:19:48 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - --- Logging error ---
+2026-10-17 17:19:48 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - Traceback (most recent call last):
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     stream.write(msg + self.terminator)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17 17:19:48 India Standard Time | ERROR    | NeuroSan:_log:817 - NeuroSan - UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f514' in position 13: character maps to <undefined>
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Call stack:
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032, in _bootstrap
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self._bootstrap_inner()
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.run()
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 213, in run
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.dispatch_events(self.event_queue)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\observers\api.py", line 391, in dispatch_events
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     handler.dispatch(event)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\watchdog\events.py", line 217, in dispatch
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - getattr(self, f"on_{event.event_type}")(event)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 57, in on_created
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.handle_event(RegistryChangeHandler.CREATED, event.src_path)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -   File "C:\Users\Admin\neuro-san\.venv\Lib\site-packages\neuro_san\service\watcher\registries\registry_change_handler.py", line 73, in handle_event
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan -     self.logger.info("\U0001f514 File %s: %s", event_name, src_path)
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Message: '\U0001f514 File %s: %s'
+2026-10-17 17:19:48 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan - Arguments: ('created', 'C:\\Users\\Admin\\neuro-san\\registries\\generated\\snow_database_sql_generator.hocon')
+2026-10-17 17:19:51 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Observed events: modified 1, added 1, deleted 0
+2026-10-17 17:19:51 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Updating manifest file: ['C:\Users\Admin\neuro-san\registries\manifest.hocon']
+2026-10-17 17:20:06 India Standard Time | WARNING  | NeuroSan:_log:819 - NeuroSan - {"message": "Manifest file C:\Users\Admin\neuro-san\registries\manifest.hocon restored in 15.69 seconds.", "user_id": "None", "Timestamp": "2026-10-17T17:20:06.730921", "source": "HttpServer", "message_type": "Warning", "request_id": "None"}
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent tools/internet_info_gatherer
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent tools/internet_info_gatherer (6410 bytes): 2889636701216
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent basic/music_nerd
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent basic/music_nerd (4720 bytes): 2889637182688
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent generated/sql_query_generator
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent generated/sql_query_generator (15181 bytes): 2889636456032
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_designer
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_designer (36031 bytes): 2889637482128
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Added agent generated/snow_database_sql_generator to allowed http service list
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: ADDED network for agent generated/snow_database_sql_generator (12205 bytes): 2889637179904
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_test_generator
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_test_generator (45033 bytes): 2889636697712
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_query_generator
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_query_generator (8062 bytes): 2889637180768
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_instructions_editor
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_instructions_editor (25589 bytes): 2889636698624
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent experimental/cruse_theme_agent
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent experimental/cruse_theme_agent (25858 bytes): 2889637482800
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent agent_network_editor
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent agent_network_editor (31283 bytes): 2889636704336
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: Reset service for modified agent experimental/cruse_widget_agent
+2026-10-17 17:20:06 India Standard Time | INFO     | NeuroSan:_log:821 - NeuroSan:HttpServer: REPLACED network for agent experimental/cruse_widget_agent (12979 bytes): 2889637482272

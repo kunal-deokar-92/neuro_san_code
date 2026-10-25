@@ -1,0 +1,22 @@
+Agent: agent_network_designer.__agent_network_instructions_editor
+
+[AGENT] @ 2026-10-18 18:20:41:
+Received arguments:
+```json
+{
+    "tool_args": {
+        "agent_network_description": "snowflake_database_development_assistant",
+        "mode": "modify"
+    },
+    "tool_start": true
+}
+```
+
+[AGENT] @ 2026-10-18 18:21:07:
+Got result:
+```json
+{
+    "tool_end": true,
+    "tool_output": "Instructions/description have been set in the agent network."
+}
+```
